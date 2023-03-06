@@ -28,12 +28,12 @@ class HomeViewModel @Inject constructor(
 
     init {
         stateHandle.get<String>(STATE_KEY_NAME)?.let { name ->
-            greetingMsg.value = TimeUtils.sayGreeting(name)
+            greetingMsg.value = TimeUtils.generateGreeting(name, TimeUtils.getCurrentHourOfDay())
         }
         loadDrugs()
     }
 
-    private fun loadDrugs() {
+    public fun loadDrugs() {
         repository.getDrugs().onEach { dataState ->
             loading.value = dataState.loading
 

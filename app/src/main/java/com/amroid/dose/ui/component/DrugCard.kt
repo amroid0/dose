@@ -43,13 +43,13 @@ fun DrugCard(
         text = drug.name,
         modifier = Modifier.align(Alignment.CenterHorizontally),
 
-        style = MaterialTheme.typography.h3
+        style = MaterialTheme.typography.h4
       )
       Text(
         text = drug.dose,
         modifier = Modifier
           .align(Alignment.CenterHorizontally),
-        style = MaterialTheme.typography.h5
+        style = MaterialTheme.typography.h6
       )
       Text(
         text = drug.strength,

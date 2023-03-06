@@ -51,6 +51,7 @@ class DiseaseRepository(
     }
 
     public suspend fun cacheDrugs(drugEntityList: List<DrugEntity>) {
+        dao.deleteAllDrugs()
         dao.insertDrugs(drugEntityList)
     }
 

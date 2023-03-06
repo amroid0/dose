@@ -18,4 +18,6 @@ interface DrugDao {
 
     @Query("SELECT * FROM drugs  WHERE id = :id")
     suspend fun getDrug(id: Int): DrugEntity
+    @Query("DELETE FROM drugs")
+    suspend fun deleteAllDrugs()
 }
