@@ -1,3 +1,4 @@
+package com.amroid.dose.data.datasources.remote
 import com.google.gson.annotations.SerializedName
 
 data class Problem(

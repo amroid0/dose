@@ -3,7 +3,6 @@ package com.amroid.dose.data.datasources.local
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.amroid.dose.data.model.DrugEntity
 
 @Dao
 interface DrugDao {

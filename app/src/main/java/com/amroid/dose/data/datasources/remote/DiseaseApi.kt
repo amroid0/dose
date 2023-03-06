@@ -1,6 +1,5 @@
 package com.amroid.dose.data.datasources.remote
 
-import Problem
 import retrofit2.http.GET
 
 interface DiseaseApi {

@@ -1,4 +1,4 @@
-package com.amroid.dose.data.model
+package com.amroid.dose.data.datasources.local
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

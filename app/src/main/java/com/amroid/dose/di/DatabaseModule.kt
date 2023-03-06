@@ -15,7 +15,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class DatabaseModule {
+object DatabaseModule {
 
     @Singleton
     @Provides
@@ -27,5 +27,5 @@ class DatabaseModule {
 
     @Singleton
     @Provides
-    fun userDao(db: DiseaseDatabase): DrugDao = db.userDao()
+    fun drugDao(db: DiseaseDatabase): DrugDao = db.userDao()
 }

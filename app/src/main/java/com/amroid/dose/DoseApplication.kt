@@ -1,4 +1,12 @@
 package com.amroid.dose
 
-class DoseApplication {
+import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
+class DoseApplication :Application() {
+  override fun onCreate() {
+    super.onCreate()
+
+  }
 }
