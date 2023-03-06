@@ -1,4 +1,9 @@
 package com.amroid.dose.ui.screens.drugDetail
 
-class DrugDetailScreen {
+import androidx.compose.runtime.Composable
+import androidx.navigation.NavHostController
+
+@Composable
+fun DrugDetailScreen(navController: NavHostController) {
+
 }
