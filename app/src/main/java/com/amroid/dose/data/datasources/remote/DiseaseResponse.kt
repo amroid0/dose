@@ -1,7 +1,15 @@
 package com.amroid.dose.data.datasources.remote
+
+import com.amroid.dose.data.model.DrugModel
 import com.google.gson.annotations.SerializedName
 
-data class Problem(
+data class DiseaseResponse(
+
+    @SerializedName("problems") var problems: List<Problems> = arrayListOf()
+
+)
+
+data class Problems(
     @SerializedName("Diabetes") val diabetes: List<Diabetes>,
     @SerializedName("Asthma") val asthma: List<Asthma>
 )

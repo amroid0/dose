@@ -1,5 +1,6 @@
 package com.amroid.dose.di
 import com.amroid.dose.data.datasources.remote.DiseaseApi
+import com.amroid.dose.data.mappers.NetworkMapper
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -59,6 +60,11 @@ object NetworkModule {
     @Provides
     fun provideRestApiService(retrofit: Retrofit): DiseaseApi {
         return retrofit.create(DiseaseApi::class.java)
+    }
+    @Singleton
+    @Provides
+    fun provideNetworkMapper(): NetworkMapper {
+        return NetworkMapper()
     }
 
 }

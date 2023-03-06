@@ -6,6 +6,8 @@ import android.content.Context
 import androidx.room.Room
 import com.amroid.dose.data.datasources.local.DiseaseDatabase
 import com.amroid.dose.data.datasources.local.DrugDao
+import com.amroid.dose.data.mappers.EntityMapper
+import com.amroid.dose.data.mappers.NetworkMapper
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -28,4 +30,8 @@ object DatabaseModule {
     @Singleton
     @Provides
     fun drugDao(db: DiseaseDatabase): DrugDao = db.userDao()
+    @Provides
+    fun provideEntityMapper(): EntityMapper {
+        return EntityMapper()
+    }
 }
